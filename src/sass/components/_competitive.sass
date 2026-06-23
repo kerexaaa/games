@@ -1,0 +1,51 @@
+.competitive-banner
+    display: grid
+    grid-column: full-start / col-end 4
+    grid-template-columns: repeat(16, 1fr)
+    grid-template-rows: repeat(24, 1fr)
+    background: url(/games/src/assets/img/header-bg.png) center / cover no-repeat
+    @include respond(tab-port)
+        grid-column: 1 / -1
+
+    &__img
+
+        &_1
+            width: 100%
+            grid-column: 3 / 15
+            grid-row: 4 / 12
+
+            @include respond(tab-port)
+                grid-column: 2 / 10
+
+        &_2
+            width: 100%
+            grid-column: 5 / -1
+            grid-row: 10 / 23
+            transform: translateX(3.5rem)
+
+            @include respond(tab-port)
+                grid-column: 8 / 15
+
+    &__text
+        background-color: $color-blue-dark
+        grid-column: col-start 5 / full-end
+        display: grid
+        align-content: center
+        justify-items: start
+        padding: 0 8rem
+
+        @include respond(tab-port)
+            grid-column: 1 / -1
+            grid-row: 5 / 6
+            padding: 4rem
+
+        h2
+            width: 90%
+            margin-bottom: 3rem
+
+    &__description
+        color: $color-white
+        line-height: 113%
+        font-weight: 400
+        margin-bottom: 4rem
+        width: 80%

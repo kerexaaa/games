@@ -1,0 +1,45 @@
+.header
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(/games/src/assets/img/header-bg.png) center / cover no-repeat
+    display: grid
+    padding: 5rem 0rem 5rem 6rem
+    grid-column: full-start / col-end 6
+    grid-template-rows: 1fr min-content minmax(10rem, min-content) 1fr
+    
+    @include respond(tab-port)
+        grid-column: full-start / full-end
+
+    &__links
+        font-size: 1.6rem
+        font-weight: 700
+        color: $color-gray
+        display: grid
+        grid-template-columns: 1fr max-content 1fr
+        grid-column-gap: 2rem
+        align-items: center
+        margin-bottom: 1rem
+        &::before, &::after
+            content: ""
+            height: 1px
+            display: block
+            background-color: $color-gray
+
+    &__img
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        justify-items: center
+        grid-gap: 2rem
+
+    &__img img
+        height: 2.5rem
+        filter: brightness(140%)
+
+    &__btn
+        align-self: start
+        justify-self: start
+
+.logo
+    display: block
+    margin-bottom: 8rem
+    &__img
+        display: block
+        margin: 0 auto
