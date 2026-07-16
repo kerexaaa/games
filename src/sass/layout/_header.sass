@@ -4,9 +4,11 @@
     padding: 5rem 0rem 5rem 6rem
     grid-column: full-start / col-end 6
     grid-template-rows: 1fr min-content minmax(10rem, min-content) 1fr
+    row-gap: 2rem
     
     @include respond(tab-port)
         grid-column: full-start / full-end
+        padding: 4rem 3rem
 
     &__links
         font-size: 1.6rem
